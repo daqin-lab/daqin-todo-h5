@@ -1,12 +1,15 @@
 {
-  "name": "daqin-todo-h5",
+  "name": "daqin-ai-fullstack",
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "w*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "dev:w01": "npm run dev -w w01-todo-db",
+    "dev:w02": "npm run dev -w w02-auth",
+    "build:all": "npm run build --workspaces"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.0",
